@@ -35,7 +35,7 @@ To save time in this process, the IT team suggested an ML system that is capable
 * We want a ML model to predict if a leaf contains powdery mildew, based on historical image data. It is a supervised model, a 2-class, single-label, classification model.
 * Our outcome is provide the Marianne McGuineys team a faster and reliable diagnostic if a given leaf has powdery spots or patches that can indicate that the cherry tree is not healthy.
 * The model success metrics are
-    * Accuracy of 65% or above on the test set
+    * Accuracy of 97% or above on the test set
 * The model output is defined as a flag, indicating if the leaf contains any feature that can show that the tree is infected. The staff of the plantation will take a picture of some leaves of the tree and upload them to the App. The preciction is made on the fly.
 * Heuristic: Currently, the process is to manually verify if a given cherry tree contains powdery mildew. An employee spends around 30 minutes in each tree, taking a few samples of tree leaves and verifying visually if the leaf tree is healthy or has powdery mildew. If it has powdery mildew, the employee applies a specific compound to kill the fungus. The time spent applying this compound is 1 minute. The company has thousands of cherry trees located in multiple farms across the country. As a result, this manual process is not scalable due to time spent in the manual process inspection.
 * The training data to fit the model come from [Kaggle](https://www.kaggle.com/), there is no description available about the dataset, it contains 2104 files of healthy leaves and 2104 files of powdery mildew leaves.
@@ -43,6 +43,7 @@ To save time in this process, the IT team suggested an ML system that is capable
 
 
 ## Dashboard Design
+
 ### Page 1: Quick Project Summary
 * Quick project summary
     * General information
@@ -56,17 +57,27 @@ To save time in this process, the IT team suggested an ML system that is capable
     * Business Requirements
         * The client is interested in conducting a study to visually differentiate a cherry leaf that is healthy and that contains powdery mildew.
         * The client is interested to predict if a cherry leaf is healthy or contains powdery mildew.
+
 ### Page 2: Leaves Visualizer
 * It will answer business requirement 1
     * Checkbox 1 - Difference between average and variability image
     * Checkbox 2 - Difference between average healthy and average not healthy leaves
     * Checkbox 3 - Image Montage
+
 ### Page 3: Powdery Wildew Detector
 * Business requirement 2 information.
 * Link to download a set of healthe and not healthy leaves images for live prediction.
 * User Interface with a file uploader widget. The user should upload leaf images. It will display the image and a prediction statement, indicating if the leaf is healthy or not.
 * Table with image name and prediction results.
 * Download button to download table.
+
+### Page 4: Project Hypotheses and Validation
+* We have done our research and know that the first sign of problems is usually white, powdery spots or patches on the top side of leaves or on plant stems. If we see that kind of signs in a leaf, the tree has powdery mildew.
+
+### Page 5: ML Performance Metrics
+* Label Frequencies for Train, Validation and Test Sets
+* Model History - Accuracy and Losses
+* Model Evaluation result
 
 ** List all dashboard pages and its content, either block of information or widgets, like: buttons, checkbox, image, or any other item that your dashboard library supports.
 
