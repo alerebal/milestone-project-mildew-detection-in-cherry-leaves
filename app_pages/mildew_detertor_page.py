@@ -1,29 +1,50 @@
 import streamlit as st
-import matplotlib.pyplot as plt
+from PIL import Image
+import numpy as np
 import pandas as pd
-from matplotlib.image import imread
-from src.machine_learning.evaluate_clf import load_test_evaluation
 
+from src.data_management import download_dataframe_as_csv
+from src.machine_learning.predictive_analysis import (
+                                                    load_model_and_predict,
+                                                    resize_input_image,
+                                                    plot_predictions_probabilities
+                                                    )
 
-def ml_performance_page():
-    version = 'v1'
+def mildew_detector_body():
+    st.info(
+        f"The client is interested in predicting if a cherry leaf is healthy or contains powdery mildew."
+        )
 
-    st.write("### Train, Validation and Test Set: Labels Frequencies")
+    st.write(
+        f"* You can download a set of haelthy and powdery mildew infected leaves for live prediction. "
+        f"You can download the images from [here](https://www.kaggle.com/codeinstitute/cherry-leaves)"
+        )
 
-    labels_distribution = plt.imread(f"outputsTest/{version}/labels_distribution.png")
-    st.image(labels_distribution, caption='Labels Distribution on Train, Validation and Test Sets')
     st.write("---")
 
+    images_buffer = st.file_uploader('Upload leaves images samples. You may select more than one.',
+                                        type=['png','jpg','jpeg'],accept_multiple_files=True)
+   
+    if images_buffer is not None:
+        df_report = pd.DataFrame([])
+        for image in images_buffer:
 
-    st.write("### Model History")
-    col1, col2 = st.beta_columns(2)
-    with col1: 
-        model_acc = plt.imread(f"outputsTest/{version}/model_training_acc.png")
-        st.image(model_acc, caption='Model Traninig Accuracy')
-    with col2:
-        model_loss = plt.imread(f"outputsTest/{version}/model_training_losses.png")
-        st.image(model_loss, caption='Model Traninig Losses')
-    st.write("---")
+            img_pil = (Image.open(image))
+            st.info(f"Leaf image Sample: **{image.name}**")
+            img_array = np.array(img_pil)
+            st.image(img_pil, caption=f"Image Size: {img_array.shape[1]}px width x {img_array.shape[0]}px height")
 
-    st.write("### Generalised Performance on Test Set")
-    st.dataframe(pd.DataFrame(load_test_evaluation(version), index=['Loss', 'Accuracy']))
+            version = 'v1'
+            resized_img = resize_input_image(img=img_pil, version=version)
+            pred_proba, pred_class = load_model_and_predict(resized_img, version=version)
+            plot_predictions_probabilities(pred_proba, pred_class)
+
+            df_report = df_report.append({"Name":image.name, 'Result': pred_class },
+                                        ignore_index=True)
+        
+        if not df_report.empty:
+            st.success("Analysis Report")
+            st.table(df_report)
+            st.markdown(download_dataframe_as_csv(df_report), unsafe_allow_html=True)
+
+
