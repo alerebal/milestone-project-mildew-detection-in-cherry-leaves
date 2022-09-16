@@ -3,6 +3,8 @@ import streamlit as st
 # MultiPage class will generate a different Streamlit page to render in the app
 class MultiPage:
 
+    ['theme']
+    base = 'dark'
 
     def __init__(self, app_name) -> None:
         self.pages = []
