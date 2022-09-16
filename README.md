@@ -58,11 +58,19 @@ To save time in this process, the IT team suggested an ML system that is capable
         * The client is interested in conducting a study to visually differentiate a cherry leaf that is healthy and that contains powdery mildew.
         * The client is interested to predict if a cherry leaf is healthy or contains powdery mildew.
 
+**Wireframe**
+
+![wireframe page 1](src/images/wireframe-milestone-5_page-0001.jpg)
+
 ### Page 2: Leaves Visualizer
 * It will answer business requirement 1
     * Checkbox 1 - Difference between average and variability image
     * Checkbox 2 - Difference between average healthy and average not healthy leaves
     * Checkbox 3 - Image Montage
+
+**Wireframe**
+
+![wireframe page 2](src/images/wireframe-milestone-5_page-0002.jpg)
 
 ### Page 3: Powdery Wildew Detector
 * Business requirement 2 information.
@@ -71,13 +79,25 @@ To save time in this process, the IT team suggested an ML system that is capable
 * Table with image name and prediction results.
 * Download button to download table.
 
+**Wireframe**
+
+![wireframe page 3](src/images/wireframe-milestone-5_page-0003.jpg)
+
 ### Page 4: Project Hypotheses and Validation
 * We have done our research and know that the first sign of problems is usually white, powdery spots or patches on the top side of leaves or on plant stems. If we see that kind of signs in a leaf, the tree has powdery mildew.
+
+**Wireframe**
+
+![wireframe page 4](src/images/wireframe-milestone-5_page-0004.jpg)
 
 ### Page 5: ML Performance Metrics
 * Label Frequencies for Train, Validation and Test Sets
 * Model History - Accuracy and Losses
 * Model Evaluation result
+
+**Wireframe**
+
+![wireframe page 5](src/images/wireframe-milestone-5_page-0005.jpg)
 
 ** List all dashboard pages and its content, either block of information or widgets, like: buttons, checkbox, image, or any other item that your dashboard library supports.
 
