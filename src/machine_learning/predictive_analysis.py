@@ -12,6 +12,8 @@ def plot_predictions_probabilities(pred_proba, pred_class):
     Plot prediction probability results
     """
 
+    colors = px.colors.sequential.Greens
+
     prob_per_class= pd.DataFrame(
             data=[0,0],
             index={'Healthy': 0, 'Powdery mildew infected': 1}.keys(),
@@ -22,14 +24,20 @@ def plot_predictions_probabilities(pred_proba, pred_class):
         if x not in pred_class: prob_per_class.loc[x] = 1 - pred_proba
     prob_per_class = prob_per_class.round(3)
     prob_per_class['Diagnostic'] = prob_per_class.index
-    
+
+
     fig = px.bar(
             prob_per_class,
             x = 'Diagnostic',
             y = prob_per_class['Probability'],
+            color='Probability',
+            color_continuous_scale=colors,
             range_y=[0,1],
-            width=600, height=300,template='seaborn')
+            width=700, height=300
+            )
     st.plotly_chart(fig)
+    
+    
 
 
 

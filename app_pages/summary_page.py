@@ -6,7 +6,7 @@ def summary_page_body():
 
     st.write("### Quick Project Summary")
 
-    st.info(
+    st.success(
         f"**General Information**\n"
         f"* Many different fungal species cause powdery mildew, with each species attacking"
         f" a different plant or plant family. The widespread disease affects many plant types,"
@@ -27,7 +27,7 @@ def summary_page_body():
         f"[Project README file](https://github.com/alerebal/milestone-project-mildew-detection-in-cherry-leaves).")
     
 
-    st.info(
+    st.success(
         f"The project has 2 business requirements:\n"
         f"* 1 - The client is interested in conducting a study to visually differentiate a cherry leaf"
         f" that is healthy and that contains powdery mildew.\n"

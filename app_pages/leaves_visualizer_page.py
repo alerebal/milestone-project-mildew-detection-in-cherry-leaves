@@ -11,7 +11,7 @@ import random
 
 def leaves_visualizer_page_body():
     st.write("### Leaves Visualizer")
-    st.info(
+    st.success(
         f"* The client is interested in conducting a study to visually differentiate a cherry leaf"
         f" that is healthy from one that contains powdery mildew.")
     
@@ -90,7 +90,7 @@ def image_montage(dir_path, label_to_display, nrows, ncols, figsize=(15,10)):
             img = imread(dir_path + '/' + label_to_display + '/' + img_idx[x])
             img_shape = img.shape
             axes[plot_idx[x][0], plot_idx[x][1]].imshow(img)
-            axes[plot_idx[x][0], plot_idx[x][1]].set_title(f"Width {img_shape[1]}px x Height {img_shape[0]}px")
+            # axes[plot_idx[x][0], plot_idx[x][1]].set_title(f"Width {img_shape[1]}px x Height {img_shape[0]}px")
             axes[plot_idx[x][0], plot_idx[x][1]].set_xticks([])
             axes[plot_idx[x][0], plot_idx[x][1]].set_yticks([])
         plt.tight_layout()
