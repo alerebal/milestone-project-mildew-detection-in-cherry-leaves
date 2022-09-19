@@ -3,9 +3,10 @@ import matplotlib.pyplot as plt
 
 
 def summary_page_body():
-
+    """ Funtion to show the summary page """
     st.write("### Quick Project Summary")
 
+    # General information and dataset
     st.success(
         f"**General Information**\n"
         f"* Many different fungal species cause powdery mildew, with each species attacking"
@@ -22,11 +23,12 @@ def summary_page_body():
         f"* The available dataset contains 4208 thousand images taken from different leaves, half"
         f" infected and half healthy.")
 
+    # Link to the README file
     st.write(
         f"* For additional information, please visit and **read** the "
         f"[Project README file](https://github.com/alerebal/milestone-project-mildew-detection-in-cherry-leaves).")
     
-
+    # Project business requirements
     st.success(
         f"The project has 2 business requirements:\n"
         f"* 1 - The client is interested in conducting a study to visually differentiate a cherry leaf"

@@ -12,6 +12,7 @@ def plot_predictions_probabilities(pred_proba, pred_class):
     Plot prediction probability results
     """
 
+    # set colors to the prediction plot
     colors = px.colors.sequential.Greens
 
     prob_per_class= pd.DataFrame(
@@ -36,9 +37,6 @@ def plot_predictions_probabilities(pred_proba, pred_class):
             width=700, height=300
             )
     st.plotly_chart(fig)
-    
-    
-
 
 
 def resize_input_image(img, version):  

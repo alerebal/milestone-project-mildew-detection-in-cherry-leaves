@@ -10,12 +10,16 @@ import random
 
 
 def leaves_visualizer_page_body():
+    """ Functio to display the leaves visualizer page """
     st.write("### Leaves Visualizer")
+    # Write the business requirement 1
     st.success(
         f"* The client is interested in conducting a study to visually differentiate a cherry leaf"
         f" that is healthy from one that contains powdery mildew.")
     
+    # We are currently use the first version of the app
     version = 'v1'
+    # Show average and variability of images
     if st.checkbox("Differences between average and variability images"):
       
         avg_var_healty = plt.imread(f"outputs/{version}/avg_var_healthy.png")
@@ -33,7 +37,7 @@ def leaves_visualizer_page_body():
         st.image(avg_var_healty, caption='Healty leaves - Avegare and Variability')
         st.image(avg_var_powdery_mildew, caption='Powdery Mildew infected leaves - Average and Variability')
         st.write("---")
-
+    # Show the difference between average and variability images
     if st.checkbox("Differences between average haelthy and average infected leaves"):
         diff_between_avgs = plt.imread(f"outputs/{version}/avg_diff.png")
 
@@ -46,6 +50,7 @@ def leaves_visualizer_page_body():
 
         st.image(diff_between_avgs, caption='Difference between average images')
 
+    # Show the image montage
     if st.checkbox("Image Montage"): 
         st.write("* To refresh the montage, click on 'Create Montage' button")
         my_data_dir = 'inputs/datasets/cherry-leaves'
@@ -59,6 +64,7 @@ def leaves_visualizer_page_body():
 
 
 def image_montage(dir_path, label_to_display, nrows, ncols, figsize=(15,10)):
+    """ Function to create and display the image montage section """
     sns.set_style("white")
     labels = os.listdir(dir_path)
 
@@ -90,13 +96,11 @@ def image_montage(dir_path, label_to_display, nrows, ncols, figsize=(15,10)):
             img = imread(dir_path + '/' + label_to_display + '/' + img_idx[x])
             img_shape = img.shape
             axes[plot_idx[x][0], plot_idx[x][1]].imshow(img)
-            # axes[plot_idx[x][0], plot_idx[x][1]].set_title(f"Width {img_shape[1]}px x Height {img_shape[0]}px")
             axes[plot_idx[x][0], plot_idx[x][1]].set_xticks([])
             axes[plot_idx[x][0], plot_idx[x][1]].set_yticks([])
         plt.tight_layout()
     
         st.pyplot(fig=fig)
-        # plt.show()
 
 
     else:
