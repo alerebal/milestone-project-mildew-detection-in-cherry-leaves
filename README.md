@@ -5,13 +5,13 @@
 
 
 ## Business Requirements
-The cherry plantation crop from Farmy & Foods is facing a challenge where their cherry plantations have been presenting powdery mildew. Currently, the process is to manually verify if a given cherry tree contains powdery mildew. An employee spends around 30 minutes in each tree, taking a few samples of tree leaves and verifying visually if the leaf tree is healthy or has powdery mildew. If it has powdery mildew, the employee applies a specific compound to kill the fungus. The time spent applying this compound is 1 minute.  The company has thousands of cherry trees located in multiple farms across the country. As a result, this manual process is not scalable due to time spent in the manual process inspection.
+- The cherry plantation crop from Farmy & Foods is facing a challenge where their cherry plantations have been presenting powdery mildew. Currently, the process is to manually verify if a given cherry tree contains powdery mildew. An employee spends around 30 minutes in each tree, taking a few samples of tree leaves and verifying visually if the leaf tree is healthy or has powdery mildew. If it has powdery mildew, the employee applies a specific compound to kill the fungus. The time spent applying this compound is 1 minute.  The company has thousands of cherry trees located in multiple farms across the country. As a result, this manual process is not scalable due to time spent in the manual process inspection.
 
-To save time in this process, the IT team suggested an ML system that is capable of detecting instantly, using a leaf tree image, if it is healthy or has powdery mildew. A similar manual process is in place for other crops for detecting pests, and if this initiative is successful, there is a realistic chance to replicate this project to all other crops. The dataset is a collection of cherry leaf images provided by Farmy & Foods, taken from their crops.
+- To save time in this process, the IT team suggested an ML system that is capable of detecting instantly, using a leaf tree image, if it is healthy or has powdery mildew. A similar manual process is in place for other crops for detecting pests, and if this initiative is successful, there is a realistic chance to replicate this project to all other crops. The dataset is a collection of cherry leaf images provided by Farmy & Foods, taken from their crops.
 
 
-* 1 - The client is interested in conducting a study to visually differentiate a cherry leaf that is healthy and that contains powdery mildew.
-* 2 - The client is interested to predict if a cherry leaf is healthy or contains powdery mildew.
+    * 1 - The client is interested in conducting a study to visually differentiate a cherry leaf that is healthy and that contains powdery mildew.
+    * 2 - The client is interested to predict if a cherry leaf is healthy or contains powdery mildew.
 
 
 ## Hypothesis and how to validate?
@@ -99,10 +99,6 @@ To save time in this process, the IT team suggested an ML system that is capable
 
 ![wireframe page 5](src/images/wireframe-milestone-5_page-0005.jpg)
 
-** List all dashboard pages and its content, either block of information or widgets, like: buttons, checkbox, image, or any other item that your dashboard library supports.
-
-** Eventually, during the project development, you may revisit your dashboard plan to update a give feature (for example, in the beginning of the project you were confident you would use a given plot to display an insight but eventually you needed to use another plot type).
-
 
 ## Unfixed Bugs
 * You will need to mention unfixed bugs and why they were not fixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a big variable to consider, paucity of time and difficulty understanding implementation is not a valid reason to leave bugs unfixed.
@@ -120,27 +116,82 @@ To save time in this process, the IT team suggested an ML system that is capable
 5. The deployment process should happen smoothly in case all deployment files are fully functional. Click now the button Open App on the top of the page to access your App.
 
 
-## Main Data Analysis and Machine Learning Libraries
-* Here you should list the libraries you used in the project and provide example(s) on how you used these libraries.
+## Libraries used in the project
+
+### Streamlit
+
+- [Streamlit](https://streamlit.io/) is an open-source Python library that makes it easy to create and share beautiful, custom web apps for machine learning and data science. In just a few minutes you can build and deploy powerful data apps.
+
+- I used this library to create and deploy the application, another libraries or frameworks can be use to deploy the application(the dashboard or API), as Django, Flask, etc, but I have use [Streamlit](https://streamlit.io/) for all the steps.
+
+
+### Numpy
+
+- [NumPy](https://numpy.org/) is an open source project aiming to enable numerical computing with Python. It was created in 2005, building on the early work of the Numeric and Numarray libraries. 
+
+- [NumPy](https://numpy.org/) help us to work with arrays. In this case it was useful because the images are arrays of data and the rest of libraries use [NumPy](https://numpy.org/) under the hood.
+
+- I have used it to convert the images into an array, to generate empty arrays than were used to store images data, and working with data inside arrays in general.
+
+
+### Pandas
+
+- [Pandas](https://pandas.pydata.org/) is a fast, powerful, flexible and easy to use open source data analysis and manipulation tool, built on top of the Python programming language.
+
+- [Pandas](https://pandas.pydata.org/) is used to manipulate and analyze the data, it's one of the more important libraries in data science and help us to clean data sets.
+
+- I have used [Pandas](https://pandas.pydata.org/) to create some dataframes than after been created were plotted with another tool.
+
+
+### Matplotlib
+
+- [Matplotlib](https://matplotlib.org/) is a comprehensive library for creating static, animated, and interactive visualizations in Python.
+
+- I used it to create the figure and axes of the plots, set them, show the plot and save it as an png image. I used it to plot augmented images and load images as well.
+
+
+### Seaborn
+
+- [Seaborn](https://seaborn.pydata.org/) is a Python data visualization library based on matplotlib. It provides a high-level interface for drawing attractive and informative statistical graphics.
+
+- I used it to give values to the axes, set background and bars in the plots than after were shown with [Matplotlib](https://matplotlib.org/).
+
+
+### Plotly
+
+- [Plotly](https://plotly.com) provides online graphing, analytics, and statistics tools for individuals and collaboration, as well as scientific graphing libraries for Python, R, MATLAB, Perl, Julia, Arduino, and REST.
+
+- I used it to set the plot of the predictions probabilyity results, and then show the plot with [streamlit plotly_chart](https://docs.streamlit.io/library/api-reference/charts/st.plotly_chart).
+
+
+### Tensorflow
+
+- [TensorFlow](https://www.tensorflow.org/) is an open-source library developed by Google primarily for deep learning applications.
+[TensorFlow](https://www.tensorflow.org/) accepts data in the form of multi-dimensional arrays of higher dimensions called tensors. Multi-dimensional arrays are very handy in handling large amounts of data.
+
+- I used it to processing images, generate data to fit model, and ML tasks in general as create a model, fit the model, evaluate it, etc.
+
+
+### - Keras
+
+- [Keras](https://keras.io/) is a high-level, deep learning API developed by Google for implementing neural networks. It is written in Python and is used to make the implementation of neural networks easy. It also supports multiple backend neural network computation.           
+
+- I have used it as a layer over [TensorFlow](https://www.tensorflow.org/). All the tasks than required [TensorFlow](https://www.tensorflow.org/) were done using [keras](https://keras.io/).
+
+
+### PIL
+
+- [Python Imaging Library](https://en.wikipedia.org/wiki/Python_Imaging_Library) is a free and open-source additional library for the Python programming language that adds support for opening, manipulating, and saving many different image file formats.
+
+- It has been used to open images.
 
 
 ## Credits 
 
-* In this section you need to reference where you got your content, media and extra help from. It is common practice to use code from other repositories and tutorials, however, it is important to be very specific about these sources to avoid plagiarism. 
-* You can break the credits section up into Content and Media, depending on what you have included in your project. 
+* The code and the design of the dashboard was taken from the [walkthrough project Malalaria Detector](https://github.com/Code-Institute-Org/WalkthroughProject01) of the [Code Institute](https://codeinstitute.net/ie/) course, I only made few minor modifications on both of them, but essentially is the same project, but doing this way helped me to understand the concept of ML and Data Sciens in a deeper way.
 
-### Content 
+- All what I have learned about of the powdery mildew and I have used to do this project was taken from [Garden Tech webpage](https://www.gardentech.com).
 
-- The text for the Home page was taken from Wikipedia Article A
-- Instructions on how to implement form validation on the Sign Up page was taken from [Specific YouTube Tutorial](https://www.youtube.com/)
-- The icons in the footer were taken from [Font Awesome](https://fontawesome.com/)
-
-### Media
-
-- The photos used on the home and sign up page are from This Open Source site
-- The images used for the gallery page were taken from this other open source site
+- I have used the [Streamlit](https://docs.streamlit.io/library/advanced-features/theming) website to work on the project dashboard theme.
 
 
-
-## Acknowledgements (optional)
-* In case you would like to thank the people that provided support through this project.
