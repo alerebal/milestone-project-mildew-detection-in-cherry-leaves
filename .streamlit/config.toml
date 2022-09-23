@@ -4,8 +4,3 @@ base='dark'
 primaryColor='#586e46'
 textColor='#bbb'
 secondaryBackgroundColor='#101c2c'
-[server]
-headless = true
-port = $PORT
-enableCORS = false
-" > ~/.streamlit/config.toml
