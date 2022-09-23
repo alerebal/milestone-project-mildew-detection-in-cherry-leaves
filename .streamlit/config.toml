@@ -1,9 +1,9 @@
 [theme]
 
-base="dark"
-primaryColor="#586e46"
-textColor="#bbb"
-secondaryBackgroundColor="#101c2c"
+base='dark'
+primaryColor='#586e46'
+textColor='#bbb'
+secondaryBackgroundColor='#101c2c'
 [server]
 headless = true
 port = $PORT
