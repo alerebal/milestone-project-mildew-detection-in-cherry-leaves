@@ -52,7 +52,7 @@ def leaves_visualizer_page_body():
 
     # Show the image montage
     if st.checkbox("Image Montage"): 
-        st.write("* To refresh the montage, click on 'Create Montage' button")
+        st.info("To refresh the montage, click on 'Create Montage' button")
         my_data_dir = 'inputs/datasets/cherry-leaves'
         labels = os.listdir(my_data_dir+ '/validation')
         label_to_display = st.selectbox(label="Select label", options=labels, index=0)
@@ -65,7 +65,7 @@ def leaves_visualizer_page_body():
 
 def image_montage(dir_path, label_to_display, nrows, ncols, figsize=(15,10)):
     """ Function to create and display the image montage section """
-    sns.set_style("white")
+    sns.set_style("dark")
     labels = os.listdir(dir_path)
 
     # subset the class you are interested to display

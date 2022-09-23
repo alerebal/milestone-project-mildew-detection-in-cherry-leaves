@@ -29,6 +29,8 @@ def ml_performance_body():
 
     st.write("### Generalised Performance on Test Set")
     # Display the performance on test set
-    st.dataframe(pd.DataFrame(load_test_evaluation(version), index=['Loss', 'Accuracy']))
+    st.dataframe(pd.DataFrame(load_test_evaluation(version),
+                 index=['Loss', 'Accuracy'],
+                 columns=['Performance']))
     
     

@@ -19,8 +19,8 @@ def mildew_detector_body():
     # The user must be able to donwload some images to test the application if the don't have any other
     # image to do it, so the link to the dataset is shown to them.
     st.write(
-        f"* You can download a set of haelthy and powdery mildew infected leaves for live prediction. "
-        f"You can download the images from [here](https://www.kaggle.com/codeinstitute/cherry-leaves)"
+        f"* Download a set of haelthy and powdery mildew infected leaves for live prediction "
+        f"[here](https://www.kaggle.com/codeinstitute/cherry-leaves)"
         )
 
     st.write("---")
