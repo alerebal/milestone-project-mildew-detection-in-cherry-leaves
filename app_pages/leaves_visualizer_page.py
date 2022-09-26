@@ -26,11 +26,15 @@ def leaves_visualizer_page_body():
         avg_var_powdery_mildew = plt.imread(f"outputs/{version}/avg_var_powdery_mildew.png")
 
         st.success(
-        f"* We notice the average images show that the infected leaves have a color more white than the "
-        f"healthy ones. Maybe they are qualities hard to appreciate when we are looking only to one leaf"
+        f"* We notice the average images show that the infected leaves have a "
+        f"color more white than the "
+        f"healthy ones. Maybe they are qualities hard to appreciate when we are"
+        f" looking only to one leaf"
         f", without the posibility of compare with other one of different kind."
-        f" The variability images show more lines in the surface of the powdery mildew infected leaves"
-        f" than in the surface of the healthy ones, who have almost plane color. In this case it looks "
+        f" The variability images show more lines in the surface of the powdery"
+        f" mildew infected leaves"
+        f" than in the surface of the healthy ones, which are almost in plane "
+        f"color. In this case it looks "
         f"not that hard to appreciate it when we are looking to only one leaf."
         )
 
@@ -38,14 +42,14 @@ def leaves_visualizer_page_body():
         st.image(avg_var_powdery_mildew, caption='Powdery Mildew infected leaves - Average and Variability')
         st.write("---")
     # Show the difference between average and variability images
-    if st.checkbox("Differences between average haelthy and average infected leaves"):
+    if st.checkbox("Differences between average healthy and average infected leaves"):
         diff_between_avgs = plt.imread(f"outputs/{version}/avg_diff.png")
 
         st.success(
         f"* We can appreciate the same pattern here, where the healthy leaves have a "
         f"surface more clear, green, and the infected ones have more white color in "
-        f"the surface. Difficult to appreciate when we cannot compare both different kind"
-        f" of leaves."
+        f"the surface. Difficult to appreciate when we cannot compare both different"
+        f" kind of leaves."
         )
 
         st.image(diff_between_avgs, caption='Difference between average images')

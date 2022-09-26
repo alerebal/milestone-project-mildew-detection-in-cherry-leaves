@@ -14,13 +14,15 @@ def mildew_detector_body():
     """ Function to display the mildew detection page """
     # Business requirement 2
     st.success(
-        f"The client is interested in predicting if a cherry leaf is healthy or contains powdery mildew."
+        f"The client is interested in predicting if a cherry leaf is healthy "
+        f"or contains powdery mildew."
         )
-    # The user must be able to donwload some images to test the application if the don't have any other
-    # image to do it, so the link to the dataset is shown to them.
+    # The user must be able to donwload some images to test the application 
+    # if the don't have any other image to do it, so the link
+    # to the dataset is shown to them.
     st.write(
-        f"* Download a set of haelthy and powdery mildew infected leaves for live prediction "
-        f"[here](https://www.kaggle.com/codeinstitute/cherry-leaves)"
+        f"* Download a set of haelthy and powdery mildew infected leaves for live "
+        f"prediction [here](https://www.kaggle.com/codeinstitute/cherry-leaves)"
         )
 
     st.write("---")

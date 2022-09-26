@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 
 
 def project_hypothesis_page_body():
-    """ Function to show the hypotesis page """
+    """ Function to show the hypothesis page """
     
     st.write("### Project Hypothesis and Validation")
     
@@ -14,8 +14,8 @@ def project_hypothesis_page_body():
         f" leaf, including the undersides, until the plant looks like it's "
         f"dusted with white powder.\n"
         f"We believe that these types of characteristics should be sufficient"
-        f" to differentiate a leaf infected with powdery mildew from a healthy "
-        f"leaf.\n"
+        f" to differentiate a leaf infected with powdery mildew from a healthy"
+        f" leaf.\n"
     )
 
     st.success(
