@@ -38,7 +38,7 @@ def leaves_visualizer_page_body():
         st.image(avg_var_powdery_mildew, caption='Powdery Mildew infected leaves - Average and Variability')
         st.write("---")
     # Show the difference between average and variability images
-    if st.checkbox("Differences between average haelthy and average infected leaves"):
+    if st.checkbox("Differences between average healthy and average infected leaves"):
         diff_between_avgs = plt.imread(f"outputs/{version}/avg_diff.png")
 
         st.success(

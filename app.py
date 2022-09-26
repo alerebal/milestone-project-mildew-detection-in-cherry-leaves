@@ -13,7 +13,7 @@ app = MultiPage(app_name= "Powdery Mildew Detector")
 app.add_page('Quick Project Summary', summary_page_body)
 app.add_page('Leaves Visualizer', leaves_visualizer_page_body)
 app.add_page('Powdery Mildew Detector', mildew_detector_body)
-app.add_page('Project Hyphosis', project_hypothesis_page_body)
+app.add_page('Project Hyphothesis', project_hypothesis_page_body)
 app.add_page('ML Performance Metrics', ml_performance_body)
 
 
