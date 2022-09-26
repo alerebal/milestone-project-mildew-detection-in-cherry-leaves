@@ -41,6 +41,9 @@
 * The training data to fit the model come from [Kaggle](https://www.kaggle.com/), there is no description available about the dataset, it contains 2104 files of healthy leaves and 2104 files of powdery mildew leaves.
     * Train data - target: leaf infected or not; features: all images
 
+## Project Dashboard
+
+* Different user stories, task and bugs were documented in the [Project Dashboard](https://github.com/users/alerebal/projects/2)
 
 ## Dashboard Design
 
@@ -100,20 +103,32 @@
 ![wireframe page 5](src/images/wireframe-milestone-5_page-0005.jpg)
 
 
-## Unfixed Bugs
-* You will need to mention unfixed bugs and why they were not fixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a big variable to consider, paucity of time and difficulty understanding implementation is not a valid reason to leave bugs unfixed.
+## Bugs
+### First deploiment fail - (Fixed)
+* [The stack of Heroku did not support Python 3.8.12](https://github.com/alerebal/My-first-agile-project/issues/28)
+
+### Streamlit theme does not work in Heroku
+* [The theme I have created does not work on Heroku](https://github.com/alerebal/My-first-agile-project/issues/29)
 
 ## Deployment
 ### Heroku
 
-* The App live link is: https://YOUR_APP_NAME.herokuapp.com/ 
+* The App live link is: https://cherry-leaves-detector.herokuapp.com/
 * The project was deployed to Heroku using the following steps.
 
-1. Log in to Heroku and create an App
-2. At the Deploy tab, select GitHub as the deployment method.
-3. Select your repository name and click Search. Once it is found, click Connect.
-4. Select the branch you want to deploy, then click Deploy Branch.
-5. The deployment process should happen smoothly in case all deployment files are fully functional. Click now the button Open App on the top of the page to access your App.
+1. I created an App in my Heroku account.
+2. I cloned my GitHub code in my local machine(previously I had been working in Gitpod) because it is no longer available the possibility to link the GitHub project to Heroku, then I logged in to Heroku typing:
+        
+        heroku login -i
+
+3. The next step was push my code to Heroku with the command:
+
+        git push heroku main
+
+    * I had a problem here because when you create an app on Heroku, the stack by default does not support the Python version I was using, so I had to change the stack of my project from 22 to 20, the generated bug is [here](https://github.com/alerebal/My-first-agile-project/issues/28)
+
+* After the bug was fixed, the app was running without problem.
+* I did not do any other usual step to deploy on Heroku like create a Procfile or Requirements files because the template I have used already had them.
 
 
 ## Libraries used in the project
@@ -172,7 +187,7 @@
 - I used it to processing images, generate data to fit model, and ML tasks in general as create a model, fit the model, evaluate it, etc.
 
 
-### - Keras
+### Keras
 
 - [Keras](https://keras.io/) is a high-level, deep learning API developed by Google for implementing neural networks. It is written in Python and is used to make the implementation of neural networks easy. It also supports multiple backend neural network computation.           
 
