@@ -1,8 +1,11 @@
+# Powdery Mildew in Cherry Leaves Detector
+
+### [Fifth Code Institute Course Project](https://cherry-leaves-detector.herokuapp.com/)
+![Home page](src/images/home-page.png)
+
 ## Dataset Content
 * The dataset is sourced from [Kaggle](https://www.kaggle.com/codeinstitute/cherry-leaves). We created then a fictitious user story where predictive analytics can be applied in a real project in the workplace.
 * The dataset contains +4 thousand images taken from client's crop fields. The images show cherry leaves that are healthy and cherry leaves that contain powdery mildew, which is a fungal disease that affects a wide range of plants. The cherry plantation crop is one of their finest products in the portfolio and the company is concerned about supplying the market with a product of compromised quality.
-
-
 
 ## Business Requirements
 - The cherry plantation crop from Farmy & Foods is facing a challenge where their cherry plantations have been presenting powdery mildew. Currently, the process is to manually verify if a given cherry tree contains powdery mildew. An employee spends around 30 minutes in each tree, taking a few samples of tree leaves and verifying visually if the leaf tree is healthy or has powdery mildew. If it has powdery mildew, the employee applies a specific compound to kill the fungus. The time spent applying this compound is 1 minute.  The company has thousands of cherry trees located in multiple farms across the country. As a result, this manual process is not scalable due to time spent in the manual process inspection.
@@ -16,7 +19,7 @@
 
 ## Hypothesis and how to validate?
 * According to specialist of [Garden Tech webpage](https://www.gardentech.com), powdery mildew is one of the easiest plant diseases to recognize. The first sign of problems is usually white, powdery spots or patches on the top side of leaves or on plant stems. The powdery surface growth gradually spreads to cover the entire leaf, including the undersides, until the plant looks like it's dusted with white powder. Infected leaves turn yellow and twisted.
-    * A average image study can help to investigate it
+    * An average image study can help to investigate it.
 
 
 ## Rationale to map the business requirements to the Data Visualizations and ML tasks
@@ -65,6 +68,10 @@
 
 ![wireframe page 1](src/images/wireframe-milestone-5_page-0001.jpg)
 
+**Final page(custom theme)**
+
+![Home Page](src/images/home-page.png)
+
 ### Page 2: Leaves Visualizer
 * It will answer business requirement 1
     * Checkbox 1 - Difference between average and variability image
@@ -74,6 +81,10 @@
 **Wireframe**
 
 ![wireframe page 2](src/images/wireframe-milestone-5_page-0002.jpg)
+
+**Final page(custom theme)**
+
+![Leaves visualizer page](src/images/leaves-visualizer-page.png)
 
 ### Page 3: Powdery Wildew Detector
 * Business requirement 2 information.
@@ -86,12 +97,20 @@
 
 ![wireframe page 3](src/images/wireframe-milestone-5_page-0003.jpg)
 
+**Final page(custom theme)**
+
+![PM-detector-page](src/images/pm-detector-page.png)
+
 ### Page 4: Project Hypotheses and Validation
 * We have done our research and know that the first sign of problems is usually white, powdery spots or patches on the top side of leaves or on plant stems. If we see that kind of signs in a leaf, the tree has powdery mildew.
 
 **Wireframe**
 
 ![wireframe page 4](src/images/wireframe-milestone-5_page-0004.jpg)
+
+**Final page(custom theme)**
+
+![hypothesis page](src/images/hypothesis-page.png)
 
 ### Page 5: ML Performance Metrics
 * Label Frequencies for Train, Validation and Test Sets
@@ -102,12 +121,15 @@
 
 ![wireframe page 5](src/images/wireframe-milestone-5_page-0005.jpg)
 
+**Final page(custom theme)**
+
+![ML-performance-page](src/images/ML-performance-page.png)
 
 ## Bugs
 ### First deploiment fail - (Fixed)
 * [The stack of Heroku did not support Python 3.8.12](https://github.com/alerebal/My-first-agile-project/issues/28)
 
-### Streamlit theme does not work in Heroku
+### Streamlit theme does not work in Heroku - (Fixed)
 * [The theme I have created does not work on Heroku](https://github.com/alerebal/My-first-agile-project/issues/29)
 
 ## Deployment
@@ -207,6 +229,6 @@
 
 - All what I have learned about of the powdery mildew and I have used to do this project was taken from [Garden Tech webpage](https://www.gardentech.com).
 
-- I have used the [Streamlit](https://docs.streamlit.io/library/advanced-features/theming) website to work on the project dashboard theme.
+- I have used the [Streamlit](https://docs.streamlit.io/library/advanced-features/theming) website to work on the project dashboard custom theme.
 
 

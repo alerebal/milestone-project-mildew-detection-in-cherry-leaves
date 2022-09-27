@@ -10,7 +10,7 @@ def ml_performance_body():
     # We are currently using the version 1
     version = 'v1'
 
-    st.write("### Train, Validation and Test Set: Labels Frequencies")
+    st.write("### Train, Validation and Test Sets: Labels Frequencies")
     # Display the labels frecuncies
     labels_distribution = plt.imread(f"outputs/{version}/labels_distribution.png")
     st.image(labels_distribution, caption='Labels Distribution on Train, Validation and Test Sets')
