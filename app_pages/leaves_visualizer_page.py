@@ -56,6 +56,11 @@ def leaves_visualizer_page_body():
 
     # Show the image montage
     if st.checkbox("Image Montage"): 
+        st.success(
+            f"* The montage helps to visualize the difference between a healthy"
+            f" leaf and an infected one. The infected one has white, powdery "
+            f"spots or patches on the top side of leaves"
+        )
         st.info("To refresh the montage, click on 'Create Montage' button")
         my_data_dir = 'inputs/datasets/cherry-leaves'
         labels = os.listdir(my_data_dir+ '/validation')
