@@ -88,8 +88,8 @@
 
 ### Page 3: Powdery Wildew Detector
 * Business requirement 2 information.
-* Link to download a set of healthe and not healthy leaves images for live prediction.
-* User Interface with a file uploader widget. The user should upload leaf images. It will display the image and a prediction statement, indicating if the leaf is healthy or not.
+* Link to download a set of healthy and not healthy leaves images for live prediction.
+* User Interface with a file uploader widget. The user should upload leaves images. It will display the image and a prediction statement, indicating if the leaf is healthy or not.
 * Table with image name and prediction results.
 * Download button to download table.
 
@@ -101,8 +101,8 @@
 
 ![PM-detector-page](src/images/pm-detector-page.png)
 
-### Page 4: Project Hypotheses and Validation
-* We have done our research and know that the first sign of problems is usually white, powdery spots or patches on the top side of leaves or on plant stems. If we see that kind of signs in a leaf, the tree has powdery mildew.
+### Page 4: Project Hypothesis and Validation
+* We have done our research and know that the first sign of problems is usually white, powdery spots or patches on the top side of leaves or on plant stems. If we see that kind of signs in a leaf, the tree has powdery mildew infection.
 
 **Wireframe**
 
@@ -126,7 +126,7 @@
 ![ML-performance-page](src/images/ML-performance-page.png)
 
 ## Bugs
-### First deploiment fail - (Fixed)
+### First deployment fail - (Fixed)
 * [The stack of Heroku did not support Python 3.8.12](https://github.com/alerebal/My-first-agile-project/issues/28)
 
 ### Streamlit theme does not work in Heroku - (Fixed)
@@ -225,7 +225,7 @@
 
 ## Credits 
 
-* The code and the design of the dashboard was taken from the [walkthrough project Malalaria Detector](https://github.com/Code-Institute-Org/WalkthroughProject01) of the [Code Institute](https://codeinstitute.net/ie/) course, I only made few minor modifications on both of them, but essentially is the same project, but doing this way helped me to understand the concept of ML and Data Sciens in a deeper way.
+* The code and the design of the dashboard was taken from the [walkthrough project Malalaria Detector](https://github.com/Code-Institute-Org/WalkthroughProject01) of the [Code Institute](https://codeinstitute.net/ie/) course, I only made few minor modifications on both of them, essentially is the same project, but doing this way helped me to understand the concept of ML and Data Sciens in a deeper way.
 
 - All what I have learned about of the powdery mildew and I have used to do this project was taken from [Garden Tech webpage](https://www.gardentech.com).
 
